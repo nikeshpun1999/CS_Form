@@ -5,35 +5,33 @@ namespace CS_Form
         public Form1()
         {
             InitializeComponent();
-            TestButton testButton = new TestButton(0,0,100,40,"Clicked Button 1", 1);
-            Controls.Add(testButton);
+            int x = 0;
+            int y = 0;
+            for (int i = 1; i <= 10; i++)
+            {
+                
 
-            TestButton testButton2 = new TestButton(200,0,100,40, "Clicked Button 2",2);
-            Controls.Add(testButton2);
+                if (i>1 && i <= 4)
+                {
+                    x = (i*200) - 200;
+                }
+           
+                if (i>4 && i <= 8)
+                {
+                    
+                    y = 200;
+                    x = (i * 200) - 1000;
+                }
 
-            TestButton testButton3 = new TestButton(400, 0, 100, 40, "Clicked Button 3",3);
-            Controls.Add(testButton3);
+                if (i > 8 && i <= 10)
+                {
+                    y = 400;
+                    x = (i * 200) - 1800;
+                }
+                TestButton testButton = new TestButton(x, y, 100, 40, "Clicked Button " + i, i);
+                Controls.Add(testButton);
 
-            TestButton testButton4 = new TestButton(600, 0, 100, 40, "Clicked Button 4",4);
-            Controls.Add(testButton4);
-
-            TestButton testButton5 = new TestButton(0, 200, 100, 40, "Clicked Button 5",5);
-            Controls.Add(testButton5);
-
-            TestButton testButton6 = new TestButton(200, 200, 100, 40, "Clicked Button 6",6);
-            Controls.Add(testButton6);
-
-            TestButton testButton7 = new TestButton(400, 200, 100, 40, "Clicked Button 7",7);
-            Controls.Add(testButton7);
-
-            TestButton testButton8 = new TestButton(600, 200, 100, 40, "Clicked Button 8",8);
-            Controls.Add(testButton8);
-
-            TestButton testButton9 = new TestButton(0, 400, 100, 40, "Clicked Button 9",9);
-            Controls.Add(testButton9);
-
-            TestButton testButton10 = new TestButton(200, 400, 100, 40, "Clicked Button 10",10);
-            Controls.Add(testButton10);
+            }
         }
     }
 }
