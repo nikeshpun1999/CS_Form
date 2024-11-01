@@ -8,15 +8,18 @@ namespace CS_Form
 {
     internal class TestButton : Button
     {
-        public TestButton(int x, int y, int width, int height) {
+        string globalmessage;
+        int button_number;
+        public TestButton(int x, int y, int width, int height, string message,int button_num) {
+            globalmessage = message;
             Click += OnClick;
-            Text = "Click Me!!!";
+            Text = "Button " + button_num;
             Location = new Point(x, y);
             Size = new Size(width,height);
         }
         public void OnClick(object sender, EventArgs s)
         {
-            MessageBox.Show("Clicked");
+            MessageBox.Show(globalmessage);
         }
     }
 }
