@@ -10,10 +10,10 @@ namespace CS_Form
     {
         string globalmessage;
         int button_number;
-        public TestButton(int x, int y, int width, int height, string message,int button_num) {
-            globalmessage = message;
+        public TestButton(int x, int y, int width, int height,int button_num) {
+            globalmessage = ""+button_num;
             Click += OnClick;
-            Text = "Button " + button_num;
+            Text = ""+button_num;
             Location = new Point(x, y);
             Size = new Size(width,height);
         }
