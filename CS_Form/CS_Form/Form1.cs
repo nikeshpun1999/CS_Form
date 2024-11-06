@@ -1,7 +1,11 @@
+using System.Security.Cryptography.X509Certificates;
+
 namespace CS_Form
 {
     public partial class Form1 : Form
     {
+        TestLabel _testLabel;
+        TestButton _testButton;  
         public Form1()
         {
             InitializeComponent();
@@ -10,19 +14,25 @@ namespace CS_Form
             for (int i = 0; i < 10; i++)
             {
 
-                TestButton testButton = new TestButton((i % 3) * 100, (i / 3) * 100, 100, 100, i);
-                Controls.Add(testButton);
+                _testButton = new TestButton(this,(i % 3) * 100, (i / 3) * 100, 100, 100, i);
+                Controls.Add(_testButton);
 
             }
 
-            TestLabel testLabel = new TestLabel( "This is a label", 10, 400, 100, 500);
-            Controls.Add(testLabel);
+            _testLabel = new TestLabel( "This is a label", 10, 400, 100, 500);
+            Controls.Add(_testLabel);
 
             //Label label = new Label();
             //label.Location = new Point(0, 400);
             //label.Text = "label";
 
             //Controls.Add(label);
+
+          
+        }
+        public void LabelTextUpdate(string str)
+        {
+            _testLabel.UpdateText(str);
         }
     }
 }

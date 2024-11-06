@@ -6,12 +6,16 @@ using System.Threading.Tasks;
 
 namespace CS_Form
 {
-    internal class TestButton : Button
+     class TestButton : Button
     {
+        Form1 _form1;
+
         string globalmessage;
 
-        public TestButton(int x, int y, int width, int height,int button_num) {
-            Console.WriteLine(button_num);
+        public TestButton(Form1 form1,int x, int y, int width, int height,int button_num) {
+
+            _form1 = form1;
+
             globalmessage = ""+button_num;
             Click += OnClick;
             Text = ""+button_num;
@@ -20,7 +24,7 @@ namespace CS_Form
         }
         public void OnClick(object sender, EventArgs s)
         {
-            MessageBox.Show(globalmessage);
+            _form1.LabelTextUpdate(globalmessage);  
         }
     }
 }

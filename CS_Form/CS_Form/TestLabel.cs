@@ -16,6 +16,10 @@ namespace CS_Form
             Location = new Point(x, y);
             Size = new Size(width, height);
         }
+
+        public void UpdateText(string str) { 
+            Text = str; 
+        }
     }
 }
 
