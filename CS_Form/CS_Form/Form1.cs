@@ -14,6 +14,15 @@ namespace CS_Form
                 Controls.Add(testButton);
 
             }
+
+            TestLabel testLabel = new TestLabel( "This is a label", 10, 400, 100, 500);
+            Controls.Add(testLabel);
+
+            //Label label = new Label();
+            //label.Location = new Point(0, 400);
+            //label.Text = "label";
+
+            //Controls.Add(label);
         }
     }
 }

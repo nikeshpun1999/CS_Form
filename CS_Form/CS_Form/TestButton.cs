@@ -9,8 +9,9 @@ namespace CS_Form
     internal class TestButton : Button
     {
         string globalmessage;
-        int button_number;
+
         public TestButton(int x, int y, int width, int height,int button_num) {
+            Console.WriteLine(button_num);
             globalmessage = ""+button_num;
             Click += OnClick;
             Text = ""+button_num;
