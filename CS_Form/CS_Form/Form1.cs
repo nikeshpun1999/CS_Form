@@ -21,13 +21,6 @@ namespace CS_Form
 
             _testLabel = new TestLabel( "This is a label", 10, 400, 100, 500);
             Controls.Add(_testLabel);
-
-            //Label label = new Label();
-            //label.Location = new Point(0, 400);
-            //label.Text = "label";
-
-            //Controls.Add(label);
-
           
         }
         public void LabelTextUpdate(string str)

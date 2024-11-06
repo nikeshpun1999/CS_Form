@@ -17,8 +17,9 @@ namespace CS_Form
             Size = new Size(width, height);
         }
 
-        public void UpdateText(string str) { 
-            Text = str; 
+        public void UpdateText(string str) {
+            globalmessage = globalmessage + str;
+            Text = globalmessage;
         }
     }
 }
