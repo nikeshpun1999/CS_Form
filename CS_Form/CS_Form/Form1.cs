@@ -56,9 +56,7 @@ namespace CS_Form
             strings[index] = strings[10];
             strings[10] = tmp;
 
-            //MessageBox.Show(strings[0] + strings[1] + strings[2]+ strings[3] + strings[4] + strings[5]+ strings[6] + strings[7] + strings[8] + strings[9]);
-
-            for (int j = 0; j < 10; j++)
+            for (int j = 0; j <= 10; j++)
             {
                 Controls.RemoveAt(0);
             }
@@ -66,7 +64,7 @@ namespace CS_Form
             Controls.Remove(_testTextBox);
 ;
             _testTextBox.UpdateText(strings[10]);
-            //MessageBox.Show(strings[0] + strings[1] + strings[2] + strings[3] + strings[4] + strings[5] + strings[6] + strings[7] + strings[8] + strings[9]);
+            //MessageBox.Show(strings[0] + strings[1] + strings[2] + strings[3] + strings[4] + strings[5] + strings[6] + strings[7] + strings[8] + strings[9] + strings[10]);
 
             for (int i = 0; i < 10; i++)
             {
