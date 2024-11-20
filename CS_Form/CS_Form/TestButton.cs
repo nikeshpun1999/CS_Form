@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,20 +12,26 @@ namespace CS_Form
         Form1 _form1;
 
         string globalmessage;
+        int globalnum;
 
-        public TestButton(Form1 form1,int x, int y, int width, int height,int button_num) {
+        public TestButton(Form1 form1,int x, int y, int width, int height,int button_num,string text) {
 
             _form1 = form1;
-
+            globalnum = button_num;
             globalmessage = ""+button_num;
             Click += OnClick;
-            Text = ""+button_num;
+            Text = ""+ text;
             Location = new Point(x, y);
             Size = new Size(width,height);
+            Tag = "button";
         }
         public void OnClick(object sender, EventArgs s)
         {
-            _form1.LabelTextUpdate(globalmessage);  
+            //_form1.LabelTextUpdate(globalmessage);
+            
+            _form1.LabelTextboxUpdate(globalnum);
+
+            
         }
     }
 }
